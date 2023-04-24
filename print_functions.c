@@ -16,7 +16,7 @@ int print_s(va_list list)
 	char *str;
 	int i = 0;
 
-	str = va_arg(list, char *);
+	str = va_arg(list, char*);
 	if (str == NULL)
 	{
 		str = "(null)";	
