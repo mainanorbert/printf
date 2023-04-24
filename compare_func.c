@@ -9,6 +9,7 @@ int (*compare_func(const char *a))(va_list)
 	unsigned int i = 0;
 	myfunc_t func[] = {
 		{"c", print_c},
+		{"%", percentage_sign},
 		{"s", print_s},
 		{NULL, NULL}
 	};
