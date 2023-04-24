@@ -35,10 +35,9 @@ int _printf(const char *format, ...)
 				}
 				else
 				{
-					len += fun(args);
+					len += fun(args);								
 				}
 			}
-
 		}
 		else
 			len += _putchar(format[i]);

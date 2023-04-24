@@ -9,6 +9,18 @@ int print_c(va_list list)
 	c = va_arg(list, int);
 	_putchar(c);
 	return (1);
+
+}
+
+/**
+ * percentage_sign - prints percentage
+ * @list: list arg
+ * Return: percentage
+ */
+int percentage_sign(va_list list __attribute__((unused)))
+{
+	_putchar('%');
+	return (1);
 }
 
 int print_s(va_list list)
