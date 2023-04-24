@@ -1,41 +1,48 @@
 #include "main.h"
-#include <stdarg.h>
-#include <unistd.h>
-#include <stddef.h>
-#include <stdlib.h>
 
-/**int _putchar(char c)
-{
-    return (write(1, &c, 1));
-}*/
-
+/**
+ * _printf - prints formatted string to standard output
+ * @format: format specified (char and string)
+ * Return: number of characters printed to output
+ */
 int _printf(const char *format, ...)
 {
-    int count = 0;
-    va_list args;
-    va_start(args, format);
-    /*va_list (*p_func)(va_list);*/
-    while (*format)
-    {
-        if (*format == '%')
-        {
-            format++;
-            if (*format == '%')
-            {
-                count += _putchar('%');
-            }
-	    else
-	    {
-		    compare_func(va_arg(args, char *));
-	    }
-        }
-        else
-        {
-            count += _putchar(*format);
-        }
-        format++;
-    }
-    va_end(args);
-    return (count);
-}
+	va_list args;
+	int (*fun)(va_list);
+	int len = 0, i = 0;
 
+	va_start(args, format);
+	if (!format[i])
+		return (0);
+	if (!format[i + 1] || format[i] == '%')
+		return (-1);
+	while (format[i])
+	{
+		if (format[i] == '%')
+		{
+			if (format[i + 1] == '\0')
+			{
+				return (-1);
+			}
+			else
+			{
+				fun = compare_func(&format[i + 1]);
+				if (fun == NULL)
+				{
+					if (format[i + 1] == ' ' && !format[i + 2])
+						return (-1);
+				}
+				else
+				{
+					len += fun(args);
+				}
+			}
+
+		}
+		else
+			_putchar(format[i]);
+		i++;
+	}
+	va_end(args);
+	return (len);
+}
