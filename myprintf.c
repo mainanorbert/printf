@@ -20,16 +20,17 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			if (format[i + 1] == '\0')
+			i++;
+			if (format[i] == '\0')
 			{
 				return (-1);
 			}
 			else
 			{
-				fun = compare_func(&format[i + 1]);
+				fun = compare_func(&format[i]);
 				if (fun == NULL)
 				{
-					if (format[i + 1] == ' ' && !format[i + 2])
+					/*if (format[i + 1] == ' ' && !format[i + 2])*/
 						return (-1);
 				}
 				else
@@ -40,7 +41,7 @@ int _printf(const char *format, ...)
 
 		}
 		else
-			_putchar(format[i]);
+			len += _putchar(format[i]);
 		i++;
 	}
 	va_end(args);
