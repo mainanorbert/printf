@@ -1,6 +1,5 @@
 #ifndef MAIN_H
 #define MAIN_H
-#include <stdio.h>
 #include <stddef.h>
 #include <stdarg.h>
 
@@ -14,5 +13,5 @@ int _putchar(char c);
 int _printf(const char *format, ...);
 int print_c(va_list list);
 int print_s(va_list list);
-int (*compare_func(char *a))(va_list);
+int (*compare_func(const char *a))(va_list);
 #endif
