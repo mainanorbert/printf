@@ -14,7 +14,7 @@ int _printf(const char *format, ...)
     int count = 0;
     va_list args;
     va_start(args, format);
-    /*va_list (*p_func)(va_list);*/
+    (*fun)(va_list);
     while (*format)
     {
         if (*format == '%')
@@ -26,7 +26,8 @@ int _printf(const char *format, ...)
             }
 	    else
 	    {
-		    compare_func(va_arg(args, char *));
+		    fun = compare_func("s");
+		    fun(args);
 	    }
         }
         else

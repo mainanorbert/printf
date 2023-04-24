@@ -12,7 +12,7 @@ typedef struct myfunc
 myfunc_t;
 int _putchar(char c);
 int _printf(const char *format, ...);
-int print_c(va_list args);
-int print_s(va_list args);
+int print_c(va_list list);
+int print_s(va_list list);
 int (*compare_func(char *a))(va_list);
 #endif
