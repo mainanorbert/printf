@@ -4,25 +4,27 @@
  */
 int print_c(va_list list)
 {
-	int count = 0;
-	count += _putchar(va_arg(list, int));
-	return (count);
+	char c;
+
+	c = va_arg(list, int);
+	_putchar(c);
+	return (1);
 }
 
 int print_s(va_list list)
 {
-	int count = 0;
 	char *str;
 	int i = 0;
 
 	str = va_arg(list, char *);
 	if (str == NULL)
-		/**str = "(null)";*/
-		return ();
+	{
+		str = "(null)";	
+	}
 	while (str[i] != '\0')
 	{
-		count += _putchar(str[i]);
+		_putchar(str[i]);
 		i++;
 	}
-	return (count);
+	return (i);
 }
