@@ -21,16 +21,24 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
-			fun = compare_func(&format[i]);
-			if (fun == NULL)
+			if (format[i] == '\0')
 			{
 				return (-1);
 			}
 			else
 			{
-				/*fun = compare_func(&format[i]);*/
+
+			fun = compare_func(&format[i]);
+			if (fun == NULL)
+			{
+				if (format[i] == ' ')
+					return (-1);
+			}
+			else
+			{
 				len += fun(args);
 			}
+		}
 		}
 		else
 			len += _putchar(format[i]);
