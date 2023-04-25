@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * _printf - prints formatted string to standard output
@@ -14,29 +15,21 @@ int _printf(const char *format, ...)
 	va_start(args, format);
 	if (!format[i])
 		return (-1);
-	if (!format[i + 1] || format[i] == '%')
+	if (!format[i + 1] && format[i] == '%')
 		return (-1);
 	while (format[i])
 	{
 		if (format[i] == '%')
 		{
 			i++;
-			if (format[i] == '\0')
+			if (format[i] == '\0' || format[i] == ' ')
 			{
 				return (-1);
 			}
 			else
 			{
 				fun = compare_func(&format[i]);
-				if (fun == NULL)
-				{
-					if (format[i] == ' ' && !format[i + 1])
-						return (-1);
-				}
-				else
-				{
-					len += fun(args);
-				}
+				len += fun(args);
 			}
 		}
 		else
@@ -44,5 +37,7 @@ int _printf(const char *format, ...)
 		i++;
 	}
 	va_end(args);
+	len = len - 1;
+	printf("%d\n", len);
 	return (len);
 }
