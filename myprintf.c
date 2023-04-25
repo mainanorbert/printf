@@ -35,11 +35,11 @@ int _printf(const char *format, ...)
 				}
 				else
 				{
-					len += fun(args);								
+					len += fun(args);
 				}
 			}
 		}
-		else 
+		else
 			_putchar(format[i]);
 		i++;
 	}

@@ -3,6 +3,11 @@
 #include <stddef.h>
 #include <stdarg.h>
 
+/**
+ * struct myfunc - takes specifier and points to a function specified
+ * @sp: pointer to argument specifier
+ * @myprint: function pointed
+ */
 typedef struct myfunc
 {
 	char *sp;

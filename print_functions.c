@@ -1,6 +1,8 @@
 #include "main.h"
 /**
- * _putchar - prints singlecharacter
+ * print_c - print single character
+ * @list: lists arguments
+ * Return: character
  */
 int print_c(va_list list)
 {
@@ -23,6 +25,11 @@ int percentage_sign(va_list list __attribute__((unused)))
 	return (1);
 }
 
+/**
+ * print_s - prints string
+ * @list: lists arguments
+ * Return: string count
+ */
 int print_s(va_list list)
 {
 	char *str;
@@ -31,7 +38,7 @@ int print_s(va_list list)
 	str = va_arg(list, char *);
 	if (str == NULL)
 	{
-		str = "(null)";	
+		str = "(null)";
 	}
 	while (str[i] != '\0')
 	{
