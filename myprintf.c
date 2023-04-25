@@ -14,20 +14,21 @@ int _printf(const char *format, ...)
 	va_start(args, format);
 	if (!format[i])
 		return (-1);
+	if ((format[i] == '%') && (format[i + 1]) == '\0')
+		return (-1);
 	while (format[i])
 	{
-		if ((format[i] == '%') && (!format[i + 1]))
-			return (1);
 		if (format[i] == '%')
 		{
 			i++;
-			if (compare_func(&format[i]) == NULL)
+			fun = compare_func(&format[i]);
+			if (fun == NULL)
 			{
 				return (-1);
 			}
 			else
 			{
-				fun = compare_func(&format[i]);
+				/*fun = compare_func(&format[i]);*/
 				len += fun(args);
 			}
 		}

@@ -47,3 +47,33 @@ int print_s(va_list list)
 	}
 	return (i);
 }
+/**
+ * print_d - prints decimal numbers
+ * @list: arguments given
+ * Return: returns the number of strings printed
+ */
+int print_d(va_list list)
+{
+	long int n;
+	long int i = 0;
+	char digits[10000];
+
+	n = va_arg(list, long int);
+
+	if (n < 0)
+	{
+		_putchar('-');
+		n = -n;
+	}
+	do {
+		digits[i++] = n % 10 + '0';
+		n /= 10;
+	} while (n > 0);
+	i--;
+	while (i >= 0)
+	{
+		_putchar(digits[i]);
+		i--;
+	}
+	return (0);
+}
