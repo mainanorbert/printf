@@ -5,8 +5,8 @@
 
 /**
  * struct myfunc - takes specifier and points to a function specified
- * @sp: pointer to argument specifier
- * @myprint: function pointed
+ * @sp: pointer to specifier
+ * @myprint: function pointer to function retirning va_list
  */
 typedef struct myfunc
 {
