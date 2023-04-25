@@ -6,8 +6,9 @@ int main(void)
 {
     char c = 'H';
     char *s = "Hello, world!";
-    
+        
     _printf("This %c is good\n", c);
     _printf("Nober %s\n", s);
+    _printf("Perc: [%%]\n");
     return 0;
 }
