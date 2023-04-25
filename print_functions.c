@@ -15,7 +15,7 @@ int print_c(va_list list)
 }
 
 /**
- * percentage_sign - prints percentage
+ * percentage_sign - prints percentage from va_list
  * @list: list arg
  * Return: percentage
  */
