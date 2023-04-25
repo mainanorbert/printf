@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
  * _printf - prints formatted string to standard output
@@ -22,7 +21,7 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
-			if (format[i] == '\0' || format[i] == ' ')
+			if (compare_func(&format[i]) == NULL)
 			{
 				return (-1);
 			}
