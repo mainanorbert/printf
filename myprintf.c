@@ -30,12 +30,12 @@ int _printf(const char *format, ...)
 				fun = compare_func(&format[i]);
 				if (fun == NULL)
 				{
-					/*if (format[i + 1] == ' ' && !format[i + 2])*/
+					if (format[i] == ' ' && !format[i + 1])
 						return (-1);
 				}
 				else
 				{
-					len += fun(args);								
+					len += fun(args);
 				}
 			}
 		}

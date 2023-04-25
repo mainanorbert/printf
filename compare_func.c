@@ -2,6 +2,8 @@
 /**
  * compare_func - compares spacefier and returns appropriate function
  * the argument to function pointer
+ * @a: takes in the specifier
+ * Return: functions to perform a task for the specifier
  */
 int (*compare_func(const char *a))(va_list)
 
