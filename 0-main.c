@@ -5,7 +5,7 @@
 int main(void)
 {
     /*char c = 'H';
-    char *s = "Hello, world! osiemo";
+    char *s = "Hello, world!";
         
     _printf("This %c is good\n", c);
     _printf("Nober %s\n", s);
