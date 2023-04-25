@@ -1,12 +1,2 @@
-#!/bin/bash
-<<<<<<< HEAD
-# ignores main file
-
-*main.c
-
-# ignores emacs files
-=======
-*main.c
->>>>>>> a9fba0f7de27c94da5325c188a64e6b28adde01b
-*~
-*#
+main.c
+0-main.c
