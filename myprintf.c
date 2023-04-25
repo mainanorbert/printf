@@ -31,7 +31,7 @@ int _printf(const char *format, ...)
 			fun = compare_func(&format[i]);
 			if (fun == NULL)
 			{
-				if (format[i] == ' ')
+				if ((format[i] == ' ') && (!format[i + 1]))
 					return (-1);
 			}
 			else
@@ -45,6 +45,5 @@ int _printf(const char *format, ...)
 		i++;
 	}
 	va_end(args);
-	len = len - 1;
 	return (len);
 }
