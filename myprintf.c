@@ -12,7 +12,7 @@ int _printf(const char *format, ...)
 	int len = 0, i = 0;
 
 	va_start(args, format);
-	if (!format[i])
+	if (format == NULL)
 		return (-1);
 	if ((format[i] == '%') && (!format[i + 1]))
 		return (-1);
@@ -33,11 +33,11 @@ int _printf(const char *format, ...)
 			{
 				if ((format[i] == ' ') && (!format[i + 1]))
 					return (-1);
+				_putchar(format[i - 1]);
+				_putchar(format[i]);
 			}
 			else
-			{
 				len += fun(args);
-			}
 		}
 		}
 		else
