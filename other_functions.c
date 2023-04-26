@@ -4,7 +4,7 @@
  * @num: prints a number
  */
 
-void print_decimal(int num)
+void print_decimal(long int num)
 {
 	if (num < 0)
 	{
