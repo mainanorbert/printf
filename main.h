@@ -22,5 +22,5 @@ int print_s(va_list list);
 int (*compare_func(const char *a))(va_list);
 int percentage_sign(va_list list __attribute__((unused)));
 int print_d(va_list list);
-void print_decimal(long int n);
+void print_decimal(int n);
 #endif
