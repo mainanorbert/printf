@@ -33,8 +33,8 @@ int _printf(const char *format, ...)
 			{
 				/*if ((format[i] == ' ') && (!format[i + 1]))*/
 					/*return (-1);*/
-				_putchar(format[i - 1]);
-				_putchar(format[i]);
+				len += _putchar(format[i - 1]);
+				len += _putchar(format[i]);
 			}
 			else
 				len += fun(args);

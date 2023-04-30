@@ -14,6 +14,7 @@ int (*compare_func(const char *a))(va_list)
 		{"%", percentage_sign},
 		{"s", print_s},
 		{"d", print_d},
+		{"i", print_d},
 		{NULL, NULL}
 	};
 
