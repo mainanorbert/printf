@@ -2,13 +2,17 @@
 /**
  * print_decimal - prints decimal
  * @num: prints a number
+ * Return: count
  */
 
-void print_decimal(int num)
+int print_decimal(int num)
 {
+	int count = 0;
+
 	if (num < 0)
 	{
 		_putchar('-');
+		count++;
 		num = -num;
 	}
 	if (num >= 10)
@@ -16,4 +20,6 @@ void print_decimal(int num)
 		print_decimal(num / 10);
 	}
 	_putchar(num % 10 + '0');
+	count++;
+	return (count);
 }

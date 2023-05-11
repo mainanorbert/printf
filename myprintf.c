@@ -29,6 +29,7 @@ int _printf(const char *format, ...)
 			{
 
 			fun = compare_func(&format[i]);
+
 			if (fun == NULL)
 			{
 				/*if ((format[i] == ' ') && (!format[i + 1]))*/
