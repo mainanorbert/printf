@@ -11,18 +11,9 @@ int print_decimal(int myNum)
 
 	if (myNum < 0)
 	{
-		if (myNum == INT_MIN)
-		{
-			_putchar('-');
-			count++;
-			myNum = -(myNum + 1);
-		}
-		else
-		{
-			_putchar('-');
-			count++;
-			myNum = -myNum;
-		}
+		_putchar('-');
+		count++;
+		myNum = -myNum;
 	}
 	if (myNum >= 10)
 	{
