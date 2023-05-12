@@ -17,7 +17,7 @@ int print_decimal(int num)
 	}
 	if (num >= 10)
 	{
-		print_decimal(num / 10);
+		count += print_decimal(num / 10);
 	}
 	_putchar(num % 10 + '0');
 	count++;

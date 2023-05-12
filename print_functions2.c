@@ -7,9 +7,9 @@
  */
 int print_d(va_list list)
 {
-	int n;
+	int n, i;
 
 	n = va_arg(list, int);
-	print_decimal(n);
-	return (0);
+	i = print_decimal(n);
+	return (i);
 }
