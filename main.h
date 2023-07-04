@@ -1,6 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 #include <stddef.h>
+#include <limits.h>
 #include <stdarg.h>
 #define BUFFERSIZE 1024
 /*#define l ((INT_MAX) + (1024))*/
